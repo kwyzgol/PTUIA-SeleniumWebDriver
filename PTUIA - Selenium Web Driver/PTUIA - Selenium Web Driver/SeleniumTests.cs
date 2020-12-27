@@ -1,7 +1,7 @@
 /* Automatyzacja testowania z Selenium Web Driver
  * PTUIA 2020/2021
  * 
- * Kamil Wyøgo≥
+ * Kamil Wy≈ºgo≈Ç
  * Grupa ISI3
  */
 
@@ -18,13 +18,13 @@ namespace PTUIA
         private IWebDriver driver;
 
         [SetUp]
-        public void Setup() //Wybranie przeglπdarki Google Chrome
+        public void Setup() //Wybranie przeglƒÖdarki Google Chrome
         {
             driver = new ChromeDriver();
         }
 
         [TearDown]
-        public void Clean() //zamkniÍcie przeglπdarki
+        public void Clean() //zamkniƒôcie przeglƒÖdarki
         {
             try
             {
@@ -33,7 +33,7 @@ namespace PTUIA
             catch (Exception) {}
         }
 
-        private string GetAlertText() //pobranie tekstu alertu i jego zamkniÍcie
+        private string GetAlertText() //pobranie tekstu alertu i jego zamkniƒôcie
         {
             IAlert alert = driver.SwitchTo().Alert();
             string alertText = alert.Text;
@@ -42,12 +42,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test00_AgeBelow() //Sprawdzenie wartoúci brzegowej, ktÛra uniemoøliwia udzia≥ w zawodach
+        public void Test00_AgeBelow() //Sprawdzenie warto≈õci brzegowej, kt√≥ra uniemo≈ºliwia udzia≈Ç w zawodach
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -58,7 +58,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -67,12 +67,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test01_LowerMlodzik() //Sprawdzenie dolnej wartoúci brzegowej grupy ÑM≥odzikî
+        public void Test01_LowerMlodzik() //Sprawdzenie dolnej warto≈õci brzegowej grupy ‚ÄûM≈Çodzik‚Äù
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -83,7 +83,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -92,12 +92,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test02_UpperMlodzik() //Sprawdzenie gÛrnej wartoúci brzegowej grupy ÑM≥odzikî
+        public void Test02_UpperMlodzik() //Sprawdzenie g√≥rnej warto≈õci brzegowej grupy ‚ÄûM≈Çodzik‚Äù
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -108,7 +108,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -117,12 +117,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test03_LowerJunior() //Sprawdzenie dolnej wartoúci brzegowej grupy ÑJuniorî
+        public void Test03_LowerJunior() //Sprawdzenie dolnej warto≈õci brzegowej grupy ‚ÄûJunior‚Äù
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -133,7 +133,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -142,12 +142,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test04_UpperJunior() //Sprawdzenie gÛrnej wartoúci brzegowej grupy ÑJuniorî
+        public void Test04_UpperJunior() //Sprawdzenie g√≥rnej warto≈õci brzegowej grupy ‚ÄûJunior‚Äù
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -158,7 +158,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -167,12 +167,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test05_LowerDorosly() //Sprawdzenie dolnej wartoúci brzegowej grupy ÑDoros≥yî
+        public void Test05_LowerDorosly() //Sprawdzenie dolnej warto≈õci brzegowej grupy ‚ÄûDoros≈Çy‚Äù
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -181,7 +181,7 @@ namespace PTUIA
             driver.FindElement(By.Id("dataU")).SendKeys("01.01.2002");
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -190,12 +190,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test06_UpperDorosly() //Sprawdzenie gÛrnej wartoúci brzegowej grupy ÑDoros≥yî
+        public void Test06_UpperDorosly() //Sprawdzenie g√≥rnej warto≈õci brzegowej grupy ‚ÄûDoros≈Çy‚Äù
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -204,7 +204,7 @@ namespace PTUIA
             driver.FindElement(By.Id("dataU")).SendKeys("01.01.1956");
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -213,12 +213,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test07_LowerSenior() //Sprawdzenie dolnej wartoúci brzegowej grupy ÑSeniorî
+        public void Test07_LowerSenior() //Sprawdzenie dolnej warto≈õci brzegowej grupy ‚ÄûSenior‚Äù
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -228,7 +228,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -237,12 +237,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test08_LowerParentalConsent() //Sprawdzenie dolnej wartoúci brzegowej, kiedy wymagana jest zgoda rodzicÛw lub opiekunÛw prawnych
+        public void Test08_LowerParentalConsent() //Sprawdzenie dolnej warto≈õci brzegowej, kiedy wymagana jest zgoda rodzic√≥w lub opiekun√≥w prawnych
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -252,7 +252,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -261,12 +261,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test09_UpperParentalConsent() //Sprawdzenie gÛrnej wartoúci brzegowej, kiedy wymagana jest zgoda rodzicÛw lub opiekunÛw prawnych
+        public void Test09_UpperParentalConsent() //Sprawdzenie g√≥rnej warto≈õci brzegowej, kiedy wymagana jest zgoda rodzic√≥w lub opiekun√≥w prawnych
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -276,7 +276,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -285,12 +285,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test10_LowerUnderageMedical() //Sprawdzenie dolnej wartoúci brzegowej, kiedy wymagane jest zaúwiadczenie od lekarza o braku przeciwskazaÒ (osoby niepe≥noletnie)
+        public void Test10_LowerUnderageMedical() //Sprawdzenie dolnej warto≈õci brzegowej, kiedy wymagane jest za≈õwiadczenie od lekarza o braku przeciwskaza≈Ñ (osoby niepe≈Çnoletnie)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -300,7 +300,7 @@ namespace PTUIA
             driver.FindElement(By.Id("rodzice")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -309,12 +309,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test11_UpperUnderageMedical() //Sprawdzenie gÛrnej wartoúci brzegowej, kiedy wymagane jest zaúwiadczenie od lekarza o braku przeciwskazaÒ (osoby niepe≥noletnie)
+        public void Test11_UpperUnderageMedical() //Sprawdzenie g√≥rnej warto≈õci brzegowej, kiedy wymagane jest za≈õwiadczenie od lekarza o braku przeciwskaza≈Ñ (osoby niepe≈Çnoletnie)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -324,7 +324,7 @@ namespace PTUIA
             driver.FindElement(By.Id("rodzice")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -333,12 +333,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test12_LowerSeniorMedical() //Sprawdzenie wartoúci brzegowej, kiedy wymagane jest zaúwiadczenie od lekarza o braku przeciwskazaÒ (seniorzy)
+        public void Test12_LowerSeniorMedical() //Sprawdzenie warto≈õci brzegowej, kiedy wymagane jest za≈õwiadczenie od lekarza o braku przeciwskaza≈Ñ (seniorzy)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -347,7 +347,7 @@ namespace PTUIA
             driver.FindElement(By.Id("dataU")).SendKeys("01.01.1955");
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -356,12 +356,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test13_AgeRounding() //Sprawdzenie zaokrπglania lat do pe≥nych rocznikÛw
+        public void Test13_AgeRounding() //Sprawdzenie zaokrƒÖglania lat do pe≈Çnych rocznik√≥w
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -372,7 +372,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -381,12 +381,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test14_DataValidationDateText() //Walidacja wprowadzonych danych (ciπg znakÛw nie bÍdπcy poprawnπ datπ)
+        public void Test14_DataValidationDateText() //Walidacja wprowadzonych danych (ciƒÖg znak√≥w nie bƒôdƒÖcy poprawnƒÖ datƒÖ)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -395,7 +395,7 @@ namespace PTUIA
             driver.FindElement(By.Id("dataU")).SendKeys("kot");
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -406,10 +406,10 @@ namespace PTUIA
         [Test]
         public void Test15_DataValidationJavaScript() //Walidacja wprowadzonych danych (kod javascript)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("<script type=\"text/javascript\">var tmp = 0;</script>");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -418,11 +418,11 @@ namespace PTUIA
             driver.FindElement(By.Id("dataU")).SendKeys("01.01.2002");
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertÛw
+            //pominiƒôcie alert√≥w
             driver.SwitchTo().Alert().Accept();
             driver.SwitchTo().Alert().Accept();
 
-            //sprawdzanie czy element <script> znalaz≥ siÍ na stronie
+            //sprawdzanie czy element <script> znalaz≈Ç siƒô na stronie
             By element = By.XPath("//div[@id='returnSt']/script");
             bool result;
             try
@@ -441,10 +441,10 @@ namespace PTUIA
         [Test]
         public void Test16_DataValidationHTML() //Walidacja wprowadzonych danych (kod html)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("<button>test</button>");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -453,11 +453,11 @@ namespace PTUIA
             driver.FindElement(By.Id("dataU")).SendKeys("01.01.2002");
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertÛw
+            //pominiƒôcie alert√≥w
             driver.SwitchTo().Alert().Accept();
             driver.SwitchTo().Alert().Accept();
 
-            //sprawdzanie czy element <button> znalaz≥ siÍ na stronie
+            //sprawdzanie czy element <button> znalaz≈Ç siƒô na stronie
             By element = By.XPath("//div[@id='returnSt']/button");
             bool result;
             try
@@ -474,12 +474,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test17_DataValidationEmptyFName() //Walidacja wprowadzonych danych (puste imiÍ)
+        public void Test17_DataValidationEmptyFName() //Walidacja wprowadzonych danych (puste imiƒô)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputPassword3")).Clear();
             driver.FindElement(By.Id("inputPassword3")).SendKeys("Kowalski");
             driver.FindElement(By.Id("dataU")).Clear();
@@ -494,10 +494,10 @@ namespace PTUIA
         [Test]
         public void Test18_DataValidationEmptyLName() //Walidacja wprowadzonych danych (puste nazwisko)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("dataU")).Clear();
@@ -512,10 +512,10 @@ namespace PTUIA
         [Test]
         public void Test19_DataValidationEmptyDate() //Walidacja wprowadzonych danych (pusta data)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -528,12 +528,12 @@ namespace PTUIA
         }
 
         [Test]
-        public void Test20_DataValidationDateNegativeNumberMedical() //Walidacja wprowadzonych danych (liczba ujemna w polu daty oraz zaznaczone zaúwiadczenie od lekarza)
+        public void Test20_DataValidationDateNegativeNumberMedical() //Walidacja wprowadzonych danych (liczba ujemna w polu daty oraz zaznaczone za≈õwiadczenie od lekarza)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -543,7 +543,7 @@ namespace PTUIA
             driver.FindElement(By.Id("lekarz")).Click();
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
@@ -554,10 +554,10 @@ namespace PTUIA
         [Test]
         public void Test21_DataValidationDateNegativeNumber() //Walidacja wprowadzonych danych (liczba ujemna w polu daty)
         {
-            //za≥adowanie strony internetowej o podanym adresie URL
+            //za≈Çadowanie strony internetowej o podanym adresie URL
             driver.Navigate().GoToUrl("https://lamp.ii.us.edu.pl/~mtdyd/zawody/");
 
-            //wype≥nienie formularza
+            //wype≈Çnienie formularza
             driver.FindElement(By.Id("inputEmail3")).Clear();
             driver.FindElement(By.Id("inputEmail3")).SendKeys("Jan");
             driver.FindElement(By.Id("inputPassword3")).Clear();
@@ -566,7 +566,7 @@ namespace PTUIA
             driver.FindElement(By.Id("dataU")).SendKeys("-1");
             driver.FindElement(By.XPath("//button[@type='button']")).Click();
 
-            //pominiÍcie alertu dot. rÛønicy
+            //pominiƒôcie alertu dot. r√≥≈ºnicy
             driver.SwitchTo().Alert().Accept();
 
             string alertText = GetAlertText();
